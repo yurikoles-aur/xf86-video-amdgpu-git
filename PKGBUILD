@@ -6,8 +6,8 @@
 
 pkgname=xf86-video-amdgpu-git
 _pkgname=${pkgname%-*}
-pkgver=22.0.0.r8.g4e011b9
-pkgrel=2
+pkgver=23.0.0.r15.g18995f1
+pkgrel=1
 pkgdesc="X.org amdgpu video driver (git version)"
 arch=('x86_64')
 url="https://xorg.freedesktop.org/"
@@ -39,7 +39,7 @@ build() {
   # See https://bugs.archlinux.org/task/55102 / https://bugs.archlinux.org/task/54845
   export CFLAGS=${CFLAGS/-fno-plt}
   export CXXFLAGS=${CXXFLAGS/-fno-plt}
-  export LDFLAGS=${LDFLAGS/,-z,now}
+  export LDFLAGS=${LDFLAGS/-Wl,-z,now}
 
   #CFLAGS+=' -fcommon' # https://wiki.gentoo.org/wiki/Gcc_10_porting_notes/fno_common
 
