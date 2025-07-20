@@ -7,13 +7,12 @@
 
 pkgname=xf86-video-amdgpu-git
 pkgver=23.0.0.r26.gb696afa
-pkgrel=1
+pkgrel=2
 pkgdesc="X.org amdgpu video driver (git version)"
 arch=('x86_64')
 url="https://xorg.freedesktop.org/"
 license=('MIT')
 depends=('systemd-libs' 'mesa' 'libdrm' 'glibc')
-# makedepends=('git' 'xorg-server-devel' 'systemd' 'xorg-server' 'pixman')
 makedepends=('git' 'meson' 'xorg-server-devel' 'systemd')
 provides=("xf86-video-amdgpu=${pkgver}")
 conflicts=("xf86-video-amdgpu")
